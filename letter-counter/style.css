@@ -1,0 +1,34 @@
+/*
+Don Li
+*/
+
+p, button, input, li {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+}
+
+body {
+  background-color: black;
+}
+
+#content {
+  width: 500px;
+  margin: auto;
+}
+
+#word-form {
+  padding-top: 100px;
+
+}
+
+#letter-list {
+  color: rgb(144, 0, 0);
+  font-weight: 600;
+  padding-top: 20px;
+
+  background-image: url("img.jpeg");
+  background-repeat: no-repeat;
+  background-size: 500px;
+  
+  background-position: 0px 200px;
+}

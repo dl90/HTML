@@ -1,0 +1,85 @@
+.squeak {
+    background-color: #fefbd8;
+    border: 1px solid #618685;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 600px;
+}
+
+.squeak-message {
+    /*
+    https://www.w3schools.com/cssref/pr_font_weight.asp
+    */
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px;
+}
+
+#form-block {
+    background-color: #618685;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    /*
+    https://www.w3schools.com/css/css_navbar.asp
+    https://www.w3schools.com/css/css_image_transparency.asp
+    */
+    opacity: 0.9;
+}
+
+#user-name {
+    width: 635px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#user-message {
+    width: 635px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+#submit-button {
+    width: 640px;
+    margin-top: 5px;
+
+    /*
+    font-size doesnt affect buttons?
+    https://stackoverflow.com/questions/14950238/can-you-style-html-form-buttons-with-css
+    */
+
+    color: black;
+    font-family: 'Oswald';
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+
+#header-block {
+    background-color: #80ced6;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    width: 600px;
+    margin: auto;
+}
+
+body {
+    background-color: #d5f4e6;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footer-block {
+    padding: 80px;
+    color: #618685;
+}
