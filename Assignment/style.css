@@ -1,15 +1,15 @@
-body {
+.everything {
     margin: 0;
 }
 
-header {
+.page-header {
     background-color: thistle;
     height: 150px;
-}header nav {
+}.header-nav-bar {
     padding: 10px;
     display: flex;
     justify-content: space-between;
-}header h1 {
+}.header-title {
     color: black;
     margin: 0;
     font-size: 130px;
@@ -19,23 +19,23 @@ header {
 
     display: flex;
     align-self: flex-start;
-}header ul {
+}.header-nav-links {
     list-style: none;
     padding: 40px;
     margin: 0;
     display: flex;
     align-items: center;
-}header a {
+}.header-nav-link {
     font-size: 20px;
     padding: 15px;
     color: black;
     text-decoration: none;
-}header a:hover {
+}.header-nav-link:hover {
     color: white;
 }
 
 
-main figure {
+.album-picture {
     margin: 0;
     height: auto;
     padding: 10px;
@@ -45,13 +45,16 @@ main figure {
 
     display: flex;
     align-content: flex-start;
-}main img {
+}.album-picture-link {
     width: 400px;
     height: 400px;
     margin: 0;
     padding-inline-start: 150px;
-}main figcaption {
-    color: whitesmoke;
+}.album-title {
+    display: flex;
+    align-content: center;
+}.album-title-header {
+    color: white;
     font-size: 50px;
     font-family: fantasy;
     padding: 30px;
@@ -61,65 +64,96 @@ main figure {
 }
 
 
-main ol {
+.all-tracks {
     margin: 0;
     padding: 10px;
+    padding-bottom: 0;
     padding-inline-start: 160px;
     padding-inline-end: 100px;
     display: flex;
     flex-direction: column;
-}main li {
+}.track {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     border-bottom: 2px black solid;
-}main li:last-child {
+}.track:last-child {
     border-bottom: none;
-}li > section {
+}.track-main-info {
     display:flex;
     align-items: center;
-}main aside {
+}.track-more-info {
     display: flex;
-}main h3 {
+    align-items: center;
+}.track-name {
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 20px;
-    font-weight: 600;
-}main a {
-    /*scope includes aside a*/
+    padding-right: 5px;
+    font-weight: 700;
+}.track-name::after{
+    content: " --/-- ";
+}.artist-link, .track-play-button {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 550;
     color: black;
     text-decoration: none;
-}main a:hover {
+}.artist-link:hover, .track-play-button:hover{
     color: thistle;
+}.play-button {
+    background-color: white;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 
-aside > i {
-    /*icon*/
-}aside > a {
-    /*icon*/
-}aside time {
+.access-time::before {
+    content: url(clock-icon.svg);
+    width: 100%;
+    height: 100%;
+}.access-time {
+    font-size: 0;
+    width: 24;
+    height: 24;
+}.track-play-button {
+    font-size: 0;
+    width: 24;
+    height: 24;
+}.track-play-button::after {
+    content: url(play-icon.svg);
+    width: 100%;
+    height: 100%;
+}.track-time {
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 20px;
     font-weight: 600;
     color: black;
     text-decoration: none;
+}.track-time-info {
+    display: flex;
+    align-items: center;
 }
 
 
-footer {
+.footer {
     height: 50px;
     background-color: black;
 
     display: flex;
     align-items: center;
     justify-content: center;
-}footer h5 {
+}.footer-copyright {
     padding: 0;
     margin: 0;
-    color: whitesmoke;
+    color: white;
     font-weight: 500;
     font-size: 15px;
+}
+
+.iframe-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }

@@ -8,25 +8,24 @@
   <title>Radiohead</title>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="play-icon.svg" type="image/png">
-  <link rel="icon" href="clock-icon.svg" type="image/png">
-  <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text&display=swap">
 </head>
 
-<body>
+<body class="everything">
 
-  <header class="header">
+  <header class="page-header">
     <nav class="header-nav-bar">
       <h1 class="header-title">RADIOHEAD</h1>
       <ul class="header-nav-links">
-        <li class="header-nav-link"><a href="albums.html">Albums</a></div>
-        <li class="header-nav-link"><a href="about.html">About</a></div>
-        <li class="header-nav-link"><a href="contact.html">Contact</a></div>
+        <li class="header-nav-link-list"><a class="header-nav-link" href="albums.html">Albums</a></li>
+        <li class="header-nav-link-list"><a class="header-nav-link" href="about.html">About</a></li>
+        <li class="header-nav-link-list"><a class="header-nav-link" href="contact.html">Contact</a></li>
       </ul>
     </hav>
   </header>
 
-  <main class="main">
+  <main class="main-content">
     <section class="album-section"><!-- Album -->
       <figure class="album-picture">
         <img class="album-picture-link" src="https://i.scdn.co/image/ab67616d0000b2732f85b65d3ac4d3d7f806ca11">
@@ -39,204 +38,230 @@
         <li class="track"> <!-- Track -->
           <section class="track-main-info"> <!-- Track Name and Artist -->
             <h3 class="track-name">You</h3>
-            <article class="track-artist"> <!-- Artists -->
+            <section class="track-artist"> <!-- Artists -->
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article> <!-- Artists End -->
+            </section> <!-- Artists End -->
           </section> <!-- Track Name and Artist End -->
-          <aside class="track-more-info"> <!-- Other Track Details -->
-            <article class="track-time-info">
+          <div class="track-more-info"> <!-- Other Track Details -->
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">3:29</time>
-            </article>
+            </section>
             <!--change target to self to remove pop-up window-->
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside> <!-- Other Track Details End -->
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div> <!-- Other Track Details End -->
         </li><!-- Track End -->
 
         <li class="track"> 
           <section class="track-main-info">
             <h3 class="track-name">Creep</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">3:98</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+                <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">How Do You?</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">2:12</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Stop Whispering</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">5:26</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Thinking About You</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">2:41</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Anyone Can Play Guitar</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">3:38</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Ripcord</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">3:10</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Vegetable</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">3:13</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Prove Yourself</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">2:25</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">I Can't</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">4:13</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Lurgee</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">3:08</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
         <li class="track">
           <section class="track-main-info">
             <h3 class="track-name">Blow Out</h3>
-            <article class="track-artist">
+            <section class="track-artist">
               <a class="artist-link" href="https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb">Radiohead</a>
-            </article>
+            </section>
           </section>
-          <aside class="track-more-info">
-            <article class="track-time-info">
+          <div class="track-more-info">
+            <section class="track-time-info">
               <i class="access-time">access_time</i>
               <time class="track-time">4:40</time>
-            </article>
-            <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="self"><i>play_arrow</i></a>
-          </aside>
+            </section>
+            <button class="play-button">
+              <a class="track-play-button" href="https://open.spotify.com/track/6b2oQwSGFkzsMtQruIWm2p" target="_self"><i>play_arrow</i></a>
+            </button>
+          </div>
         </li>
 
       </ol><!-- All Tracks End -->
     </section><!-- Album End -->
     
+    <section class="iframe-container"></section>
   </main>
 
   <footer class="footer">
     <h5 class="footer-copyright">&copy; Copyright RADIOHEAD</h5>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
