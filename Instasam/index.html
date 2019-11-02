@@ -4,170 +4,171 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>InstaRamen</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
-    <div>
-        <header class="header">
-            <h1 id="title">Instasam</h1>
-        </header>
+  <header class="page-header">
+    <div class="title-conatiner">
+      <h1 id="site-title">InstaRamen</h1>
     </div>
+  </header>
 
-    <div class="post">
-        <header class="post-header">
-            <h5 class="username">Testy</h5>
-            <i class="like-icons"></i>
-            <i class="comment-icon"></i>
-            <i class="share-icon"></i>
-        </header>
-        <div class="image-section">
-            <img class="post-image" src="https://images.unsplash.com/photo-1572608705929-0e245b6fa24d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80">
-            <figcaption class="image-caption">
-                <h6>WOW</h6>
-            </figcaption>
-        </div>
-        <ul class="comment-section">
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post1!</p>
-            </li>
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post2!</p>
-            </li>
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post3!</p>
-            </li>
-        </ul>
-        <div class="submit-comment">
-            <form id = "comment-form">
-                <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-                <input  type="submit"   id="comment-button"    value="post">
-            </form>
-        </div>
+  <div class="content">
+  <div class="post-container">
+  <div class="post">
+    <header class="post-header">
+      <h5 class="username">Testy</h5>
+      <i class="like-icons"></i>
+      <i class="comment-icon"></i>
+      <i class="share-icon"></i>
+    </header>
+    <div class="image-section">
+      <img class="post-image" src="https://images.unsplash.com/photo-1572608705929-0e245b6fa24d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80">
+      <figcaption class="image-caption">
+        <h6>WOW</h6>
+      </figcaption>
     </div>
-
-    <div class="post">
-        <header class="post-header">
-            <h5 class="username">Testy1</h5>
-            <i class="like-icons"></i>
-            <i class="comment-icon"></i>
-            <i class="share-icon"></i>
-        </header>
-        <div class="image-section">
-            <img class="post-image" src="https://images.unsplash.com/photo-1572504666986-a86a1d55d832?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80">
-            <figcaption class="image-caption">
-                <h6>WOW1</h6>
-            </figcaption>
-        </div>
-        <ul class="comment-section">
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post1!</p>
-            </li>
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post2!</p>
-            </li>
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post3!</p>
-            </li>
-        </ul>
-        <div class="submit-comment">
-            <form id = "comment-form">
-                <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-                <input  type="submit"   id="comment-button"    value="post">
-            </form>
-        </div>
+    <ul class="comment-section">
+      <li class="comment-post">
+        <i class="user-display-pic"></i>
+        <p>Nice post1!</p>
+      </li>
+      <li class="comment-post">
+        <i class="user-display-pic"></i>
+        <p>Nice post2!</p>
+      </li>
+      <li class="comment-post">
+        <i class="user-display-pic"></i>
+        <p>Nice post3!</p>
+      </li>
+    </ul>
+    <div class="submit-comment">
+        <form id = "comment-form">
+            <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
+            <input  type="submit"   id="comment-button"    value="post">
+        </form>
     </div>
+  </div>
+  <div class="post">
+      <header class="post-header">
+          <h5 class="username">Testy1</h5>
+          <i class="like-icons"></i>
+          <i class="comment-icon"></i>
+          <i class="share-icon"></i>
+      </header>
+      <div class="image-section">
+          <img class="post-image" src="https://images.unsplash.com/photo-1572504666986-a86a1d55d832?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80">
+          <figcaption class="image-caption">
+              <h6>WOW1</h6>
+          </figcaption>
+      </div>
+      <ul class="comment-section">
+          <li class="comment-post">
+              <i class="user-display-pic"></i>
+              <p>Nice post1!</p>
+          </li>
+          <li class="comment-post">
+              <i class="user-display-pic"></i>
+              <p>Nice post2!</p>
+          </li>
+          <li class="comment-post">
+              <i class="user-display-pic"></i>
+              <p>Nice post3!</p>
+          </li>
+      </ul>
+      <div class="submit-comment">
+          <form id = "comment-form">
+              <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
+              <input  type="submit"   id="comment-button"    value="post">
+          </form>
+      </div>
+  </div>
+  <div class="post">
+      <header class="post-header">
+          <h5 class="username">Testy2</h5>
+          <i class="like-icons"></i>
+          <i class="comment-icon"></i>
+          <i class="share-icon"></i>
+      </header>
+      <div class="image-section">
+          <img class="post-image" src="https://images.unsplash.com/photo-1572467864505-0a33f44507e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80">
+          <figcaption class="image-caption">
+              <h6>WOW2</h6>
+          </figcaption>
+      </div>
+      <ul class="comment-section">
+          <li class="comment-post">
+              <i class="user-display-pic"></i>
+              <p>Nice post1!</p>
+          </li>
+          <li class="comment-post">
+              <i class="user-display-pic"></i>
+              <p>Nice post2!</p>
+          </li>
+          <li class="comment-post">
+              <i class="user-display-pic"></i>
+              <p>Nice post3!</p>
+          </li>
+      </ul>
+      <div class="submit-comment">
+          <form id = "comment-form">
+              <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
+              <input  type="submit"   id="comment-button"    value="post">
+          </form>
+      </div>
+  </div>
+  <div class="post">
+          <header class="post-header">
+              <h5 class="username">Testy2</h5>
+              <i class="like-icons"></i>
+              <i class="comment-icon"></i>
+              <i class="share-icon"></i>
+          </header>
+          <div class="image-section">
+              <img class="post-image" src="https://images.unsplash.com/photo-1542416409-400da26855b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
+              <figcaption class="image-caption">
+                  <h6>WOW2</h6>
+              </figcaption>
+          </div>
+          <ul class="comment-section">
+              <li class="comment-post">
+                  <i class="user-display-pic"></i>
+                  <p>Nice post1!</p>
+              </li>
+              <li class="comment-post">
+                  <i class="user-display-pic"></i>
+                  <p>Nice post2!</p>
+              </li>
+              <li class="comment-post">
+                  <i class="user-display-pic"></i>
+                  <p>Nice post3!</p>
+              </li>
+          </ul>
+          <div class="submit-comment">
+              <form id = "comment-form">
+                  <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
+                  <input  type="submit"   id="comment-button"    value="post">
+              </form>
+          </div>
+      </div>
+  </div>
+  </div>
 
-    <div class="post">
-        <header class="post-header">
-            <h5 class="username">Testy2</h5>
-            <i class="like-icons"></i>
-            <i class="comment-icon"></i>
-            <i class="share-icon"></i>
-        </header>
-        <div class="image-section">
-            <img class="post-image" src="https://images.unsplash.com/photo-1572467864505-0a33f44507e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80">
-            <figcaption class="image-caption">
-                <h6>WOW2</h6>
-            </figcaption>
-        </div>
-        <ul class="comment-section">
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post1!</p>
-            </li>
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post2!</p>
-            </li>
-            <li class="comment-post">
-                <i class="user-display-pic"></i>
-                <p>Nice post3!</p>
-            </li>
-        </ul>
-        <div class="submit-comment">
-            <form id = "comment-form">
-                <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-                <input  type="submit"   id="comment-button"    value="post">
-            </form>
-        </div>
-    </div>
+  <div class="content">
+      <footer class="footer">
+          <form id ="post-form">
+              <input  type = "text"   name = "user-name"      placeholder = "Username">
+              <input  type = "text"   name = "image-url"      placeholder = "Image URL">
+              <input  type = "text"   name = "user-comment"   placeholder = "Comment">
+              <input  type = "submit" id = "post-button"      value = "post">
+          </form>
+      </footer>
+  </div>
 
-    <div class="post">
-            <header class="post-header">
-                <h5 class="username">Testy2</h5>
-                <i class="like-icons"></i>
-                <i class="comment-icon"></i>
-                <i class="share-icon"></i>
-            </header>
-            <div class="image-section">
-                <img class="post-image" src="https://images.unsplash.com/photo-1542416409-400da26855b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80">
-                <figcaption class="image-caption">
-                    <h6>WOW2</h6>
-                </figcaption>
-            </div>
-            <ul class="comment-section">
-                <li class="comment-post">
-                    <i class="user-display-pic"></i>
-                    <p>Nice post1!</p>
-                </li>
-                <li class="comment-post">
-                    <i class="user-display-pic"></i>
-                    <p>Nice post2!</p>
-                </li>
-                <li class="comment-post">
-                    <i class="user-display-pic"></i>
-                    <p>Nice post3!</p>
-                </li>
-            </ul>
-            <div class="submit-comment">
-                <form id = "comment-form">
-                    <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-                    <input  type="submit"   id="comment-button"    value="post">
-                </form>
-            </div>
-        </div>
-
-
-    <div>
-        <footer class="footer">
-            <form id ="post-form">
-                <input  type = "text"   name = "user-name"      placeholder = "Username">
-                <input  type = "text"   name = "image-url"      placeholder = "Image URL">
-                <input  type = "text"   name = "user-comment"   placeholder = "Comment">
-                <input  type = "submit" id = "post-button"      value = "post">
-            </form>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-    
+  <script src="script.js"></script>
 </body>
 </html>
