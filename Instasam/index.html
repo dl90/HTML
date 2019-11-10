@@ -11,14 +11,18 @@
 
 
 <body>
+
   <header class="page-header">
-    <div class="title-conatiner">
-      <h1 id="site-title">InstaRamen</h1>
+    <div class="content">
+      <div class="title-conatiner">
+        <h1 class="site-title">InstaRamen</h1>
+      </div>
     </div>
   </header>
 
   <div class="content">
     <div class="post-container">
+
       <div class="post">
         <header class="post-header">
           <h5 class="username">Testy</h5>
@@ -51,12 +55,13 @@
           </ul>
         </div>
         <div class="submit-comment">
-          <form id = "comment-form">
-            <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-            <input  type="submit"   id="comment-button"    value="post">
+          <form class = "comment-form">
+            <input class="post-comment"   type = "text"   name="post-comment"   placeholder="Add a comment...">
+            <input class="comment-button" type="submit"   id="comment-button"   value="Post">
           </form>
         </div>
       </div>
+
       <div class="post">
         <header class="post-header">
           <h5 class="username">Testy1</h5>
@@ -89,12 +94,13 @@
           </ul>
         </div>
         <div class="submit-comment">
-          <form id = "comment-form">
-            <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-            <input  type="submit"   id="comment-button"    value="post">
+          <form class = "comment-form">
+            <input class="post-comment"   type = "text"   name="post-comment"   placeholder="Add a comment...">
+            <input class="comment-button" type="submit"   id="comment-button"   value="Post">
           </form>
         </div>
       </div>
+
       <div class="post">
         <header class="post-header">
           <h5 class="username">Testy2</h5>
@@ -127,12 +133,13 @@
           </ul>
         </div>
         <div class="submit-comment">
-          <form id = "comment-form">
-            <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-            <input  type="submit"   id="comment-button"    value="post">
+          <form class = "comment-form">
+            <input class="post-comment"   type = "text"   name="post-comment"   placeholder="Add a comment...">
+            <input class="comment-button" type="submit"   id="comment-button"   value="Post">
           </form>
         </div>
       </div>
+
       <div class="post">
         <header class="post-header">
           <h5 class="username">Testy2</h5>
@@ -165,25 +172,27 @@
           </ul>
         </div>
         <div class="submit-comment">
-            <form id = "comment-form">
-                <input  type = "text"   name="post-comment"    placeholder="Add a comment...">
-                <input  type="submit"   id="comment-button"    value="post">
-            </form>
+          <form class = "comment-form">
+            <input class="post-comment"   type = "text"   name="post-comment"   placeholder="Add a comment...">
+            <input class="comment-button" type="submit"   id="comment-button"   value="Post">
+          </form>
         </div>
       </div>
     </div>
   </div>
 
-    <footer class="footer">
-      <div class="content">
-        <form id ="post-form">
-          <input  class="new-post-field" type = "text"   name = "user-name"      placeholder = "Username">
-          <input  class="new-post-field" type = "text"   name = "image-url"      placeholder = "Image URL">
-          <input  class="new-post-field" type = "text"   name = "user-comment"   placeholder = "Comment">
-          <input  type = "submit" id = "post-button"      value = "post">
-        </form>
-    </footer>
-  </div>
+  <div class="gap-spacing"></div>
+
+  <footer class="footer">
+    <div class="content">
+      <form id="post-form">
+        <input  class="new-post-field"  type = "text"   name = "user-name"      placeholder = "Username">
+        <input  class="new-post-field"  type = "text"   name = "image-url"      placeholder = "Image URL">
+        <input  class="new-post-field"  type = "text"   name = "user-comment"   placeholder = "Comment">
+        <input  class="new-post-button" type = "submit" id = "post-button"      value = "Post">
+      </form>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
