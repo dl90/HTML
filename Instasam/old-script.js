@@ -1,23 +1,17 @@
-main(posts);
+/**
+ * @author Don
+ */
 
-function main (post) {
+/**
+ * Function creates new post.
+ */
+const newPostFunc = () => {
+
+  const newPosts = document.querySelector('#post-form');
+  const postUserName = newPosts.querySelector('[name=user-name]').value;
+  const postImageUrl = newPosts.querySelector('[name=image-url]').value;
+  const postImageComment = newPosts.querySelector('[name=image-comment]').value;
   const postContainer = document.querySelector('.post-container');
-  postContainer.innerHTML = "";
-
-  post.forEach(element => {
-    createPostElement(element);
-  });
-}
-
-
-function createPostElement(post) {
-
-  const postContainer = document.querySelector('.post-container');
-  //const postId = post.id;
-  const postUserName = post.username;
-  const postImageUrl = post.image_url;
-  const postImageComment = post.message;
-  const postComments = post.comments;
 
   //creating new post
   const newPost = document.createElement('section');
@@ -95,27 +89,85 @@ function createPostElement(post) {
   commentForm.appendChild(commentButton);
 
   postContainer.appendChild(newPost);
+};
 
-   //comment loop
-   postComments.forEach(comment => {
 
-    const commentText = comment.message;
+/**
+ * Function creates new comment.
+ */
+const newComment = (comment) => {
+  
+  const commentText = comment.parentElement.querySelector(".post-comment").value;
 
-    const post1 = document.querySelector('.all-comment-posts');
-    const newComment = document.createElement('li');
-    newComment.setAttribute('class', 'comment-post');
-    
-    post1.appendChild(newComment);
-    
-    //user icon
-    const userIcon = document.createElement('i');
-    userIcon.setAttribute('class', "user-display-pic");
-    newComment.appendChild(userIcon);
-    
-    //comment section
-    const newCommentText = document.createElement('p');
-    newCommentText.setAttribute('class', 'post-text');
-    newCommentText.innerText = commentText;
-    newComment.appendChild(newCommentText);
+  const allCommentPosts = comment.parentElement.parentElement.querySelector('.all-comment-posts');
+  const newComment = document.createElement('li');
+  newComment.setAttribute('class', 'comment-post');
+  
+  allCommentPosts.appendChild(newComment);
+  
+  //user icon
+  const userIcon = document.createElement('i');
+  userIcon.setAttribute('class', "user-display-pic");
+  newComment.appendChild(userIcon);
+  
+  //comment section
+  const newCommentText = document.createElement('p');
+  newCommentText.setAttribute('class', 'post-text');
+  newCommentText.innerText = commentText;
+  newComment.appendChild(newCommentText);
+}
+
+
+/**
+ * Comment event listener
+ */
+const commentFunc = () => {
+
+  const commentForm = document.querySelectorAll('.comment-form');
+
+  // commentForm.addEventListener('submit', event => {
+  //   event.preventDefault();
+  //   newComment(commentForm);
+  // })
+
+  commentForm.forEach(comment => {
+
+    comment.addEventListener('submit', event => {
+      event.preventDefault();
+      newComment(comment);
+    });
   });
 }
+
+
+
+/**
+ * Post event listener (should presist)
+ */
+const postFunc = () => {
+
+  const commentForm = document.querySelectorAll('.comment-form');
+  commentForm.forEach(comment => {
+
+    comment.removeEventListener('submit', () => {
+      //event.preventDefault();
+      newComment(comment)
+      console.log('here');
+    })
+  });
+
+  const Post = document.querySelector('#post-form');
+  Post.addEventListener('submit', event => {
+    event.preventDefault();
+    newPostFunc();
+    commentFunc();
+    // event.target.addEventListener('submit', event => {
+    //   event.preventDefault();
+    //   commentFunc();
+    // }, true)
+  });
+}
+
+//calls both functions
+commentFunc();
+postFunc();

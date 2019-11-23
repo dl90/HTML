@@ -38,5 +38,3 @@ const posts = [
     comments: []
   }
 ]
-
-module.exports = { posts };

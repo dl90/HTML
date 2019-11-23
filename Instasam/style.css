@@ -56,15 +56,15 @@ body {
   align-items: center;
   padding-right: 15px;
 }.like-icon {
-  content: url(heart.svg);
-    width: 60%;
-    height: 60%;
+  content: url('./icons/heart.svg');
+  width: 60%;
+  height: 60%;
 }.comment-icon {
-  content: url(message.svg);
+  content: url('./icons/message.svg');
   width: 60%;
   height: 60%;
 }.share-icon {
-  content: url(share.svg);
+  content: url('./icons/share.svg');
   width: 60%;
   height: 60%;
 }.image-section {
@@ -114,7 +114,7 @@ body {
 }.post-text {
   color: black;
 }.user-display-pic{
-  content: url(profile.png);
+  content: url('./icons/profile.png');
   height: 25px;
   width: auto;
   margin: 10px;
