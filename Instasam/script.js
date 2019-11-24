@@ -1,5 +1,9 @@
 main(posts);
 
+/**
+ * Main function for calling createPost/Comment.
+ * @param {Array} post An array of objects containg info for creating posts.
+ */
 function main (post) {
   const postContainer = document.querySelector('.post-container');
   postContainer.innerHTML = "";
@@ -18,6 +22,10 @@ function main (post) {
 }
 
 
+/**
+ * Creates a post from an objects value and add it to the DOM
+ * @param {Object} post Object to be passed.
+ */
 function createPostElement(post) {
 
   const postContainer = document.querySelector('.post-container');
@@ -103,11 +111,53 @@ function createPostElement(post) {
   commentForm.appendChild(commentButton);
 
   postContainer.appendChild(newPost);
-  newPost.scrollIntoView({ behavior: "smooth" });
+
+  //comment eventListener
+  const commentFormSelector = document.getElementById(`${postId}`).querySelector('.comment-form');
+  commentFormSelector.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const newObj = {};
+
+    const newCommentText = commentFormSelector.querySelector('.post-comment').value;
+    const verify = (newCommentText.length);
+
+    if(verify >= 5) {
+      newObj.message = newCommentText;
+
+      //push the comment object into the post object.comments array
+      post.comments.push(newObj);
+      // console.log(post.comments);
+  
+      const postPoster = commentFormSelector.parentElement.parentElement.querySelector('.all-comment-posts');
+      postPoster.innerHTML = "";
+      renderComments(post);
+      document.querySelector('.comment-form').reset();
+    } else {
+      alert('\nPlease enter the correct information for a new comment!')
+    }
+    
+  });
+
+  const likeEvent = document.getElementById(`${postId}`).querySelector('.like-icon');
+  likeEvent.addEventListener('click', () => {
+    console.log('Like post: ' + `${postId}`);
+  })
+
+  const commentEvent = document.getElementById(`${postId}`).querySelector('.comment-icon');
+  commentEvent.addEventListener('click', () => {
+    console.log('Comment post: ' + `${postId}`);
+  })
+
+  const shareEvent = document.getElementById(`${postId}`).querySelector('.share-icon');
+  shareEvent.addEventListener('click', () => {
+    console.log('Share post: ' + `${postId}`);
+  })
 }
 
+
 /**
- * 
+ * Creates the comments from object values and add it to the DOM
  * @param {Object} post individual post from posts.js
  */
 function renderComments(post) {
@@ -126,18 +176,18 @@ function renderComments(post) {
 
     postPoster.appendChild(newComment);
 
-    //user icon
     const userIcon = document.createElement('i');
     userIcon.setAttribute('class', "user-display-pic");
     newComment.appendChild(userIcon);
 
-    //comment section
     const newCommentText = document.createElement('p');
     newCommentText.setAttribute('class', 'post-text');
     newCommentText.innerText = commentText;
     newComment.appendChild(newCommentText);
+    newComment.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }
+
 
 /**
  * New post listener for creating new post
@@ -156,37 +206,34 @@ function postFunctionality(idArr) {
 
     const newId = (idArr.length + 1);
 
-    let obj = {};
-    obj.id = newId;
-    obj.username = postUserName;
-    obj.image_url = postImageUrl;
-    obj.message = postImageComment;
+    const verifyArr = [];
+    if (postUserName.length <= 5) {
+      verifyArr.push(1);
+    }
+    if (postImageUrl.length <= 5) {
+      verifyArr.push(1);
+    }
+    if (postImageComment.length <= 5) {
+      verifyArr.push(1);
+    }
 
-    createPostElement(obj);
-    idArr.push(newId);
+    if (verifyArr.includes(1)) {
+      alert('\nPlease enter the correct information for a new post!');
+    } else {
+      let obj = {};
+      obj.id = newId;
+      obj.username = postUserName;
+      obj.image_url = postImageUrl;
+      obj.message = postImageComment;
+      obj.comments = [];
+  
+      createPostElement(obj);
+      idArr.push(newId);
+  
+      const footer = document.querySelector('.gap-spacing');
+      footer.scrollIntoView({ behavior: "smooth"});
+      document.querySelector('#post-form').reset();
+    }
   });
   return idArr;
-}
-
-
-
-/**
- * Comment event listener
- */
-const commentFunc = () => {
-
-  const commentForm = document.querySelectorAll('.comment-form');
-
-  // commentForm.addEventListener('submit', event => {
-  //   event.preventDefault();
-  //   newComment(commentForm);
-  // })
-
-  commentForm.forEach(comment => {
-
-    comment.addEventListener('submit', event => {
-      event.preventDefault();
-      newComment(comment);
-    });
-  });
 }
