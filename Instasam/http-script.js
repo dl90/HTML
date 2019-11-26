@@ -2,14 +2,32 @@
  * @author Don (dl90)
  */
 
-//*** uncomment to run ***
-// main(posts);
+const url = 'https://instasam-one.herokuapp.com/api/insta_posts';
+// const http = require('http');
+
+main();
+
+function main () {
+  document.addEventListener('DOMContentLoaded', fetchFromDb())
+}
+
+
+async function fetchFromDb() {
+  try {
+    const data = await fetch(url , { method: 'GET' });
+    const json = await data.json();
+    call(json);
+
+  } catch(error) {
+    console.log("Loading Error!!!", error.message)
+  }
+}
 
 /**
- * Main function for calling createPost/Comment.
+ * Call function for calling createPost/Comment.
  * @param {Array} post An array of objects containg info for creating posts.
  */
-function main (post) {
+function call (post) {
   const postContainer = document.querySelector('.post-container');
   postContainer.innerHTML = "";
   let id = [];
@@ -115,28 +133,52 @@ function createPostElement(post) {
   commentButton.setAttribute('value', 'Post');
   commentForm.appendChild(commentButton);
 
-  postContainer.appendChild(newPost);
+  //appends to before first child
+  postContainer.prepend(newPost);
 
   //comment eventListener
   const commentFormSelector = document.getElementById(`${postId}`).querySelector('.comment-form');
   commentFormSelector.addEventListener('submit', event => {
     event.preventDefault();
 
-    const newObj = {};
+    const commentObj = {};
+    const commentURL = `https://instasam-one.herokuapp.com/api/insta_posts/${postId}/comments`;
 
     const newCommentText = commentFormSelector.querySelector('.post-comment').value;
     const verify = (newCommentText.length);
 
     if(verify >= 5) {
-      newObj.message = newCommentText;
+      commentObj.message = newCommentText;
 
       //push the comment object into the post object.comments array
-      post.comments.push(newObj);
-      // console.log(post.comments);
-  
+      post.comments.push(commentObj);
+
+      //sends comment to Database.
+      try {
+        fetch(commentURL, {
+          method: 'POST',
+          headers: {
+            "accept": "application/json",
+            "Content-Type": "application/json" },
+          body: JSON.stringify(commentObj)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log("Added comment : " + `${data}`);
+          fetchFromDb();
+        })
+        .catch(err => console.log(`Failed to post comment: ${err}`))
+      } catch(error) {
+        console.log("Comment Error!!!", error.message);
+      }
+
       const postPoster = commentFormSelector.parentElement.parentElement.querySelector('.all-comment-posts');
       postPoster.innerHTML = "";
-      renderComments(post);
+      // setTimeout(fetchFromDb(), 1000) ;
+      // renderComments(post);
+
+      alert("New comment posted");
+
     } else {
       alert('\nPlease enter the correct information for a new comment!')
     }
@@ -188,7 +230,8 @@ function renderComments(post) {
     newCommentText.setAttribute('class', 'post-text');
     newCommentText.innerText = commentText;
     newComment.appendChild(newCommentText);
-    newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // newComment.scrollIntoView({ behavior: "smooth", block: "center" });
     postSelector.querySelector('.comment-form').reset();
   });
 }
@@ -209,7 +252,8 @@ function postFunctionality(idArr) {
     const postImageUrl = Post.querySelector('[name=image-url]').value;
     const postImageComment = Post.querySelector('[name=image-comment]').value;
 
-    const newId = (idArr.length + 1);
+    // idArr was used previously to assign an unique id
+    // const newId = (idArr.length + 1);
 
     const verifyArr = [];
     if (postUserName.length <= 5) {
@@ -225,19 +269,37 @@ function postFunctionality(idArr) {
     if (verifyArr.includes(1)) {
       alert('\nPlease enter the correct information for a new post!');
     } else {
+
       let obj = {};
-      obj.id = newId;
+      //obj.id = newId;
       obj.username = postUserName;
       obj.image_url = postImageUrl;
       obj.message = postImageComment;
       obj.comments = [];
   
-      createPostElement(obj);
-      idArr.push(newId);
+
+      //sends post to Database.
+      try {
+        const sendPost = fetch(url, {
+          method: 'POST',
+          body: JSON.stringify({ post: obj }),
+          headers: { "Content-Type": "application/json" }
+        })
+        .then(console.log(JSON.stringify(sendPost)))
+        .catch(err => console.log(`Failed to post: ${err}`))
+      } catch(error) {
+        console.log("Posting Error!!!", error.message)
+      }
   
-      const footer = document.querySelector('.gap-spacing');
-      footer.scrollIntoView({ behavior: "smooth"});
+      const scroll = document.querySelector(".page-header");
+      scroll.scrollIntoView({ behavior: "smooth"});
       document.querySelector('#post-form').reset();
+
+      alert("New post added");
+
+      const postContainer = document.querySelector('.post-container');
+      postContainer.innerHTML = "";
+      setTimeout(fetchFromDb(), 1000);
     }
   });
   return idArr;
