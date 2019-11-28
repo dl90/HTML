@@ -3,7 +3,7 @@
  */
 
 //*** uncomment to run ***
-// main(posts);
+main(posts);
 
 /**
  * Main function for calling createPost/Comment.

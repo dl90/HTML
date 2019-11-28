@@ -3,7 +3,6 @@
  */
 
 const url = 'https://instasam-one.herokuapp.com/api/insta_posts';
-// const http = require('http');
 
 main();
 
@@ -125,6 +124,8 @@ function createPostElement(post) {
   postComment.setAttribute('class', 'post-comment');
   postComment.setAttribute('type', 'text');
   postComment.setAttribute('placeholder', 'Add a comment...');
+  postComment.setAttribute('minlength', '3');
+  postComment.setAttribute('maxlength', '45');
   commentForm.appendChild(postComment);
 
   const commentButton = document.createElement('input');
@@ -162,10 +163,12 @@ function createPostElement(post) {
             "Content-Type": "application/json" },
           body: JSON.stringify(commentObj)
         })
-        .then(res => res.json())
-        .then(data => {
-          console.log("Added comment : " + `${data}`);
-          fetchFromDb();
+        .then(res => {
+          if(res.ok) {
+            fetchFromDb();
+          } else {
+            throw new Error("Request Failed")
+          }
         })
         .catch(err => console.log(`Failed to post comment: ${err}`))
       } catch(error) {
@@ -174,8 +177,6 @@ function createPostElement(post) {
 
       const postPoster = commentFormSelector.parentElement.parentElement.querySelector('.all-comment-posts');
       postPoster.innerHTML = "";
-      // setTimeout(fetchFromDb(), 1000) ;
-      // renderComments(post);
 
       alert("New comment posted");
 
@@ -280,12 +281,20 @@ function postFunctionality(idArr) {
 
       //sends post to Database.
       try {
-        const sendPost = fetch(url, {
+        fetch(url, {
           method: 'POST',
           body: JSON.stringify({ post: obj }),
           headers: { "Content-Type": "application/json" }
         })
-        .then(console.log(JSON.stringify(sendPost)))
+        .then(res => {
+          if (res.ok) {
+            const postContainer = document.querySelector('.post-container');
+            postContainer.innerHTML = "";
+            fetchFromDb();
+          } else {
+            throw new Error("Post Request Failed!")
+          }
+        })
         .catch(err => console.log(`Failed to post: ${err}`))
       } catch(error) {
         console.log("Posting Error!!!", error.message)
@@ -296,10 +305,6 @@ function postFunctionality(idArr) {
       document.querySelector('#post-form').reset();
 
       alert("New post added");
-
-      const postContainer = document.querySelector('.post-container');
-      postContainer.innerHTML = "";
-      setTimeout(fetchFromDb(), 1000);
     }
   });
   return idArr;

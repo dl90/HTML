@@ -187,16 +187,16 @@
   <footer class="footer">
     <main class="content">
       <form id="post-form">
-        <input  class="new-post-field"  type="text"   name="user-name"      placeholder="Username">
-        <input  class="new-post-field"  type="text"   name="image-url"      placeholder="Image URL">
-        <input  class="new-post-field"  type="text"   name="image-comment"  placeholder="Comment">
+        <input  class="new-post-field"  type="text"   name="user-name"      placeholder="Username"    minlength="5"   maxlength="12"  pattern="[a-zA-Z0-9]+">
+        <input  class="new-post-field"  type="text"   name="image-url"      placeholder="Image URL"   minlength="5"   maxlength="69">
+        <input  class="new-post-field"  type="text"   name="image-comment"  placeholder="Comment"     minlength="5"   maxlength="20">
         <input  class="new-post-button" type="submit" id="post-button"      value="Post">
       </form>
     </main>
   </footer>
 
-  <!-- <script src="posts.js"></script>
-  <script src="script.js"></script> -->
+  <!-- <script src="posts.js"></script> -->
+  <!-- <script src="script.js"></script> -->
   <script src="http-script.js"></script>
   <!-- <script src="old-script.js" text="Depreciated"></script> -->
 

@@ -197,3 +197,39 @@ body {
   background-color: lightgray;
 }
 
+
+@media (max-width: 800px) {
+  body {
+    background-color: rgb(41, 41, 41);
+  }.content {
+    margin: 0px;
+    width: auto;
+  }
+
+  .post-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }.post {
+    width: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    background-color: black;
+  }.content {
+    height: auto;
+  };
+
+  .footer {
+    height: auto;
+  }.post-form {
+    display: flex;
+    flex-direction: column;
+  }.new-post-field {
+    display: flex;
+    flex-direction: column;
+  }
+}
