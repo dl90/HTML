@@ -11,12 +11,11 @@ function main () {
 }
 
 
-async function fetchFromDb() {
+ function fetchFromDb() {
   try {
-    const data = await fetch(url , { method: 'GET' });
-    const json = await data.json();
-    call(json);
-
+    fetch(url , { method: 'GET' })
+      .then(data => data.json()
+        .then(arr => call(arr)))
   } catch(error) {
     console.log("Loading Error!!!", error.message)
   }

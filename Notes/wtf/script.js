@@ -1,11 +1,11 @@
 
-console.log("hi")
+// console.log("hi")
 
-[1,2].forEach(num => console.log(num))
+// [1,2].forEach(num => console.log(num))
 
-(() => {
-  console.log("🤗")
-})()
+// (() => {
+//   console.log("🤗")
+// })()
 
 
 
