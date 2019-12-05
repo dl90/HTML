@@ -1,0 +1,61 @@
+
+html {
+  font-size: 20px;
+}
+
+.site-content {
+  max-width: 700px;
+  /* width: 80%; */
+  margin: auto;
+  background-color: rebeccapurple;
+  
+}
+
+
+h2 {
+  font-size: 2rem;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+.mobile {
+  visibility: hidden;
+}
+
+/* 
+min-width
+max-width
+ */
+
+/* percent */
+/*  */
+/* Media Query */
+
+
+
+@media (min-width: 700px) {
+  .site-content {
+    background-color: powderblue;
+  }
+}
+
+@media (max-width: 500px) {
+
+  html {
+    font-size: 10px;
+  }
+
+  .mobile {
+    visibility: visible;
+  }
+  .desktop {
+    visibility: hidden;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+}

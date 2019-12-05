@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 123 Home Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header-container">
+     <div class="header-nav-container">
+       <button class="nav-button" type="button">Home</button>
+       <button class="nav-button" type="button">News</button>
+       <button class="nav-button" type="button">Game</button>
+       <button class="nav-button" type="button">Form</button>
+       <button class="nav-button" type="button">About Us</button>
+     </div>
+     <div class="header-logo-container">
+       <img class="header-logo"           src="./Assets/Logos/black-emblem.png">
+     </div>
+     <div class="header-icon-container">
+       <div class="facebook-icon-container icon-container">
+          <img class="facebook-icon icon" src="./Assets/Icons/facebook-color.png">
+       </div>
+       <div class="twitter-icon-container icon-container">
+         <img class="twitter-icon icon"   src="./Assets/Icons/twitter-color.png">
+       </div>
+       <div class="reddit-icon-container icon-container">
+         <img class="reddit-icon icon"    src="./Assets/Icons/reddit-color.png">
+       </div>
+       <div class="twitch-icon-container icon-container">
+         <img class="twitch-icon icon"    src="./Assets/Icons/twitch-color.png">
+       </div>
+     </div>
+    </header>
+
+    <div class="content-spacer-top"></div>
+    <section class="content">
+      
+
+      <div class="left-column">
+        <div class="audio-container">
+            <audio class="audio-player" controls>
+              <source src="" type="audio/mpeg">
+            </audio>
+        </div>
+      </div>
+
+      <div class="center-column">
+        <div class="developer-message-container"><br>
+          <h2 class="message-title">From The Game Developers</h2>
+          <p class="message">
+  My warlock is the first of the family to start the process of 'Daily Stacking' building up a stack of twenty five 
+  daily quests to hand in for XP once the Expansion arrives. Of course, the irony is that while I’ll be sporting 
+  the Witch Hunter get-up, I don’t actually know how much I’ll use the deck itself. As the Horde offensive 
+  progresses, Alliance casualties will be sent back to progressively higher levels – first E/W, then South, then the 
+  Courtyard. At some point, one of these ‘expert analysts’ is going to mention that, perhaps, in order to make money 
+  in the gaming sector, you might want to try making a good game, right?<br>
+
+  SWTOR now has three raids: Eternity Vault, Karagga's Palace, and Explosive Conflict. I first discovered Lordaeron 
+  as a fledgling warrior, prone to wearing mail and even leather because I knew almost nothing about my class, while 
+  questing. I’ve previously talked about the true dynamic nature of WH space in EVE, and I want to use last weekends 
+  Op as a backdrop to sum that thought up and perhaps add some clarity to it as well. Then there’s the hitching, 
+  stuttering, and framerate issues he experiences that make him so frustrated that our time spent playing slowly 
+  becomes more of a burden than pleasure.<br>
+
+  One in-game suggestion would be that if you ask a question in General chat, request folks message you the answer 
+  and please try to limit spoilers in General chat. For instance, SWTOR has over 200,000 lines of spoken dialogue, 
+  as verified by Guinness World Records. I was accused earlier in the week of not knowing what a gold sink is. 
+  Additionally, a guild designed from the outset for WvWvW can focus on specific perks that help in those specific 
+  situations, unlike a smaller guild which often has to also suit folks who like some PvE or crafting or whatever. 
+  GW2 will never satisfy you for the rest of your life; you have to move on to other games to rid your 
+  soul of the demons.<br>
+          </p>
+        </div>
+
+        <div class="content-spacer"></div>
+        <div class="video-container"><br>
+          <h2 class="video-title">Game Play (pre-alpha)</h2><br>
+          <iframe class="video" width="880" height="495" src="https://www.youtube.com/embed/videoseries?list=PLVKduOhPTRsL0VSSYBb2f8dq44FICzBYS" 
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        </div>
+
+        <div class="content-spacer"></div>
+        <div class="sign-up-container"><br>
+          <h2 class="sign-up-title">Sign-up for an account and test our game</h2><br>
+
+          <div class="sign-up-lower-container">
+            <div class="sign-up-left-column">
+              <img class="sign-up-game-art-left" src="./Assets/Images/signup-left.jpg" width="300px">
+            </div>
+
+            <div class="sign-up-center-column">
+              <div class="create-account-container">
+                  <form class="create-account-form">
+                    <input class="create-account-form-textfield"  type="text"       value="Email"      required>
+                    <input class="create-account-form-textfield"  type="text"       value="Username"   required><br>
+                    <input class="create-account-form-textfield"  type="password"   value="Password"   required>
+                    <input class="create-account-form-textfield"  type="password"   value="Password"   required><br>
+                    <div class="create-account-check-box-container">
+                      <input class="create-account-check-box" type="checkbox">             <label class="create-account-check-box-label" for="checkbox"> Subscribe to our news-letter</label><br>
+                      <input class="create-account-check-box" type="checkbox"   required>  <label class="create-account-check-box-label" for="checkbox"> Agree to our <span class="terms-and-conditions">terms and conditions</span></label>
+                    </div>
+                    <input class="create-account-button" type="button" value="submit">
+                  </form>
+              </div>
+            </div>
+
+            <div class="sign-up-right-column">
+              <img class="sign-up-game-art-right" src="./Assets/Images/signup-right.jpg" width="300px">
+            </div>
+          </div>
+        </div>
+        <div class="content-spacer"></div>
+      </div><!-- center-column -->
+
+      <div class="right-column">
+          <div class="login-container">
+              <form class="login-form">
+                <input type="text" value="Username" required>
+                <input type="password" value="Password" required>
+                <input type="button" value="submit">
+              </form>
+          </div>
+      </div>
+    </section>
+
+   
+    <footer class="page-footer-container">
+      <div class="footer-left-column">
+        <div class="dark-mode-container">
+          <img class="dark-mode-icon" src="./Assets/Icons/dark-light-icon.png">
+        </div>
+      </div>
+
+      <div class="footer-center-column">
+        <h6 class="footer-header-text">For learning purposes only, Crowfall content rights => ArtCraft Entertainment, Inc. </h6>
+      </div>
+
+      <div class="footer-right-column">
+
+      </div>
+
+    </footer>
+  </main>
+
+</body>
+</html>
