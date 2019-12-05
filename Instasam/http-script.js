@@ -7,11 +7,10 @@ const url = 'https://instasam-one.herokuapp.com/api/insta_posts';
 main();
 
 function main () {
-  document.addEventListener('DOMContentLoaded', fetchFromDb())
+  document.addEventListener('DOMContentLoaded', fetchFromDb());
 }
 
-
- function fetchFromDb() {
+function fetchFromDb() {
   try {
     fetch(url , { method: 'GET' })
       .then(data => data.json()
@@ -20,6 +19,7 @@ function main () {
     console.log("Loading Error!!!", error.message)
   }
 }
+
 
 /**
  * Call function for calling createPost/Comment.
@@ -185,9 +185,36 @@ function createPostElement(post) {
     
   });
 
+  let counter = 0;
   const likeEvent = document.getElementById(`${postId}`).querySelector('.like-icon');
   likeEvent.addEventListener('click', () => {
-    console.log('Like post: ' + `${postId}`);
+
+    try {
+      const likeObj = {};
+      const likePostURL = `https://instasam-one.herokuapp.com/api/insta_posts/${postId}/likes`
+
+      likeObj.like_count = parseInt( post.like_count )+ 1
+      counter = counter + 1;
+
+      console.log('Like post: ' + `${postId}` + `  [ server side: ${post.like_count} / DOM side: ${counter} ]`);
+
+      fetch(likePostURL, {
+        method: `POST`,
+        headers: {
+          "accept": "application/json",
+          "Content-Type": "application/json"},
+        body: JSON.stringify(likeObj)
+      })
+      .then(res => {
+        if(res.ok) {
+          // fetchFromDb();
+        } else {
+          throw new Error("Fetch Failed")
+        }
+      })
+    } catch(error) {
+      console.log("Like click event POST error " + error.message)
+    }
   })
 
   const commentEvent = document.getElementById(`${postId}`).querySelector('.comment-icon');

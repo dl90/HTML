@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>InstaSamen</title>
+  <title>InstaSammy</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,12 +13,14 @@
 <body>
 
   <header class="page-header">
-    <main class="content">
-      <div class="title-conatiner">
-        <h1 class="site-title">InstaRamen</h1>
-      </div>
-    </main>
+    <div class="title-conatiner">
+      <h1 class="site-title">InstaRamen</h1>
+    </div>
+    <!-- <input class="burger-menu" type="submit" value="Submit"> -->
+    <img class="burger-menu" onclick="toggle()"></img>
   </header>
+
+  <div class="top-gap-spacing"></div>
 
   <main class="content">
     <div class="post-container">
@@ -185,20 +187,28 @@
   <div class="gap-spacing"></div>
 
   <footer class="footer">
-    <main class="content">
-      <form id="post-form">
-        <input  class="new-post-field"  type="text"   name="user-name"      placeholder="Username"    minlength="5"   maxlength="12"  pattern="[a-zA-Z0-9]+">
-        <input  class="new-post-field"  type="text"   name="image-url"      placeholder="Image URL"   minlength="5"   maxlength="69">
-        <input  class="new-post-field"  type="text"   name="image-comment"  placeholder="Comment"     minlength="5"   maxlength="20">
-        <input  class="new-post-button" type="submit" id="post-button"      value="Post">
-      </form>
-    </main>
+    <form id="post-form">
+      <input  class="new-post-field"  type="text"   name="user-name"      placeholder="Username"    minlength="5"   maxlength="12"  pattern="[a-zA-Z0-9_-.]+">
+      <input  class="new-post-field"  type="text"   name="image-url"      placeholder="Image URL"   minlength="5"   maxlength="69">
+      <input  class="new-post-field"  type="text"   name="image-comment"  placeholder="Comment"     minlength="5"   maxlength="20">
+      <input  class="new-post-button" type="submit" id="post-button"      value="Post">
+    </form>
   </footer>
 
   <!-- <script src="posts.js"></script> -->
   <!-- <script src="script.js"></script> -->
   <script src="http-script.js"></script>
   <!-- <script src="old-script.js" text="Depreciated"></script> -->
+  <script>
+    const footer = document.querySelector('.footer');
+    function toggle() {
+      if (footer.style.display === "none") {
+        footer.style.display = "flex";
+      } else {
+        footer.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
