@@ -5,24 +5,17 @@ body{
 .header-nav-container {
   margin-left: 20px;
   width: 400px;
-}
-
-.header-container {
+}.header-container {
   background-color: white;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}.header-logo-container {
-  margin: auto;
-  height: auto;
 }.header-logo {
   height: 70px;
   width: auto;
-}
-
-.header-icon-container {
+}.header-icon-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,9 +26,13 @@ body{
 }.icon-container {
   margin-right: 10px;
   padding: 3px;
+  height: auto;
 }.icon {
   height: 20px;
   width: auto;
+}.icon-container:hover {
+  background-color: #E5E5E5;
+  cursor: pointer;
 }
 
 .content {
@@ -46,16 +43,12 @@ body{
 }.content-spacer-top {
   background-color: #92C9FF;
   height: 3rem;
-}
-
-.left-column {
+}.left-column {
   width: 20%;
   height: auto;
   display: flex;
   align-items: flex-start;
-}
-
-.right-column {
+}.right-column {
   width: 20%;
   height: auto;
 }.login-container {
@@ -69,9 +62,7 @@ body{
 }.login-form {
   height: 80%;
   width: 80%;
-}
-
-.center-column {
+}.center-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,9 +88,7 @@ body{
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   white-space: pre;
-}
-
-.content-spacer {
+}.content-spacer {
   width: 100%;
   height: 3rem;
 }.video-title{
@@ -131,9 +120,7 @@ body{
   margin: auto;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.sign-up-lower-container {
+}.sign-up-lower-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -160,15 +147,26 @@ body{
 
 .page-footer-container{
   background-color: white;
-  height: 80px;
+  height: 70px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}.footer-left-column {
+  margin-right: 75px;
 }.dark-mode-icon {
-  width: 70px;
-  height: auto;
-}.footer-center-column {
-  margin: auto;
+  height: 70px;
+  width: auto;
 }.footer-header-text {
   margin: 0;
   font-size: 1rem;
+}.footer-right-column{
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+}.footer-icon-container{
+  margin-right: 20px;
+}.footer-icon {
+  height: 25px;
+  width: auto;
 }
