@@ -1,0 +1,105 @@
+/*
+@author Don (dl90)
+December 7, 2019
+https://github.com/dl90
+
+Style for landing.html
+*/
+
+body {
+  margin: 0px;
+}
+
+.hero-image {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}.hero-text {
+  width: 30vw;
+  height: 30vh;
+  color: #5C0000;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -15vw, -37vh);
+  z-index: 2;
+}.hero-title {
+  margin-top: 0px;
+}.hero-subtext {
+  color: black;
+  font-size: 1rem;
+}.crowfall-link {
+  color: #5C0000;
+  text-decoration: none;
+}.crowfall-link:hover {
+  color: white;
+  text-decoration: underline;
+}.enter {
+  font-size: 40px;
+  color: white;
+  opacity: 0.5;
+  text-decoration: none;
+}.enter:hover {
+  color: #5C0000;
+  text-decoration: underline;
+}
+
+
+.hero-image-slide-container {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}.display-left {
+  float: left;
+  margin-left: 5px;
+}.display-right {
+  float: right;
+  margin-right: 5px;
+}.display-left, .display-right {
+  width: 2%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.3;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}.display-right:hover, .display-left:hover {
+  background-color: #5C0000;
+}
+
+
+.hero-image-slide-dots {
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  height: 2%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}.dots {
+  margin: 3px;
+  width: 1.5%;
+  height: 100%;
+  opacity: 0.3;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}.dots:hover {
+  background-color: #5C0000;
+}.selected-dot {
+  margin: 3px;
+  width: 1.5%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: black;
+}
