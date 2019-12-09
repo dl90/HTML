@@ -1,0 +1,140 @@
+/*
+@author Don (dl90)
+December 7, 2019
+https://github.com/dl90
+
+Darkmode css styling for header and footer for all pages.
+*/
+
+body{
+  margin: 0;
+}.nav-button, .footer-header-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*  ---header---  */
+.nav-button, .header-container {
+  background-color: black;
+}.header-container, .header-icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-nav-container {
+  margin-left: 20px;
+  width: 400px;
+  display: flex;
+}.header-nav-container:hover {
+  cursor: default;
+}.nav-button {
+  border: none;
+  font-size: 80%;
+  color: #F9F9F9;
+  padding: 5px 10px;
+  margin: 0 10px;
+  outline: none;
+}.nav-button:hover {
+  background-color: #840000;
+  color: black;
+  border-radius: 25px;
+  padding: 5px 10px;
+}.header-container {
+  width: 100%;
+  justify-content: space-between;
+}.header-logo-container {
+  height: 70px;
+}.header-icon-container {
+  height: auto;
+  width: 400px;
+  margin-right: 20px;
+  justify-content: flex-end;
+}.icon-container {
+  background-color: #E5E5E5;
+  margin-right: 10px;
+  padding: 3px;
+  height: 20px;
+  border-radius: 5px;
+}.icon {
+  height: 20px;
+  width: auto;
+}.icon-container:hover {
+  background-color: #840000;
+}
+
+/*  --- icon swap---  */
+.header-logo {
+  height: 70px;
+  width: auto;
+  content: url(../Assets/Logos/white-emblem.png);
+}.header-logo:hover {
+  background-color: #E5E5E5;
+  border-radius: 50px;
+  content: url(../Assets/Logos/black-emblem.png);
+}.facebook-icon {
+  content: url(../Assets/Icons/facebook-dark.png);
+}.twitter-icon {
+  content: url(../Assets/Icons/twitter-dark.png);
+}.reddit-icon {
+  content: url(../Assets/Icons/reddit-dark.png);
+}.twitch-icon {
+  content: url(../Assets/Icons/twitch-dark.png);
+}.contact-icon {
+  content: url(../Assets/Icons/mail-dark.png);
+}.fund-icon {
+  content: url(../Assets/Icons/fund-dark.png);
+}.github-icon {
+  content: url(../Assets/Icons/github-dark.png);
+}
+
+/*  ---footer---  */
+.dark-light-icon, .footer-icon-container {
+  background-color: #E5E5E5;
+}
+
+.page-footer-container{
+  background-color: black;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}.footer-left-column {
+  margin-right: 110px;
+}.dark-light-container {
+  margin-left: 30px;
+}.dark-light-icon {
+  height: 30px;
+  width: auto;
+  padding: 5px;
+  border-radius: 20px;
+}.dark-light-icon:hover {
+  background-color: #840000;
+  border-radius: 50px;
+}.footer-header-text {
+  color: #E5E5E5;
+  margin: 0;
+  font-size: 1rem;
+}.footer-right-column{
+  margin-right: 10px;
+  margin-left: 47px;
+  display: flex;
+  flex-direction: row;
+}.footer-icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 15px;
+}.footer-icon-container:hover {
+  background-color: #840000;
+}.footer-icon {
+  height: 25px;
+  width: auto;
+  margin: 3px;
+}a {
+  color: #840000;
+  text-decoration: none;
+}a:hover {
+  color: #E5E5E5;
+  cursor: default;
+}

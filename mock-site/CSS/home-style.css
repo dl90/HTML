@@ -8,7 +8,9 @@ Style for home.html
 
 body {
   margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .content {
   background:#7EBFFF;
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(126,191,255,1) 80%);
@@ -44,11 +46,20 @@ body {
 }
 
 .audio-container {
+  margin-top: 9rem;
   float: right;
   position: sticky;
   top: 10px;
 }#audio-player::-webkit-media-controls-panel {
   color: #5C0000;
+}.song-button-container {
+  display: flex;
+  justify-content: center;
+}.song-button {
+  background-color: #5C0000;
+  border-color: white;
+  color: white;
+  margin: 1px;
 }
 
 .login-container {
@@ -85,7 +96,7 @@ body {
 .message {
   width: 90%;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-block-start: 0rem;
   margin-block-end: 1rem;
 }.content-spacer {
   width: 100%;
@@ -111,7 +122,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }.create-account-form {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,5 +151,5 @@ body {
 }.create-account-button:hover {
   background-color: #5C0000;
 }.sign-up-game-art-left, .sign-up-game-art-right{
-  width: 19vw;
+  width: 18vw;
 }

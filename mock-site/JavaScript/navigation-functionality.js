@@ -1,5 +1,8 @@
 /**
  * @author Don (dl90)
+ * @date December 7, 2019
+ * @copyright https://github.com/dl90
+ * 
  * Adds basic navigation functionality to all liked pages.
  */
 
@@ -20,7 +23,7 @@ document.getElementById("form-button").onclick = function () {
 }
 
 document.getElementById("about-button").onclick = function () {
-  location.href = "about.html";
+  location.href = "about-us.html";
 }
 
 document.querySelector(".header-logo").onclick = function () {

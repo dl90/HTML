@@ -1,6 +1,10 @@
 /**
  * @author Don (dl90)
+ * @date December 7, 2019
+ * @copyright https://github.com/dl90
+ * 
  * https://www.w3schools.com/w3css/w3css_slideshow.asp
+ * Adds hero-image slideshow functionality
  */
 
 let slideIndex = 1;
