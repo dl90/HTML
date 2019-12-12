@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Finger Paint</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    
+    .canvas-container {
+      width: 98vw;
+      margin: auto;
+      /* display: flex;
+      flex-direction: column; */
+    }#canvas-box {
+      margin-top: 15px;
+      border-style: solid;
+      border-width: 2px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      
+      /* width: auto;
+      height: auto; */
+    }
+    
+    .slider {
+      margin: auto;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas-container">
+    <canvas id="canvas-box" width="1600px" height="900px"></canvas>
+    <div class="slider">
+      <span class="value-text">Brush width: </span>
+      <span id="slider-value"></span>
+      <input id="brush-width" type="range" min="1" max="30" value="1" class="slider">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
