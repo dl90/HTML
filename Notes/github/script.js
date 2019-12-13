@@ -15,6 +15,7 @@ const constructRepos = repos => repos.map(constructRepo)
 const getRepos = () => 
   fetch("https://api.github.com/users/meech-ward/repos")
   .then(r => r.json())
+  // .then(item => console.log(item));
 
 document.addEventListener("DOMContentLoaded", function() {
 
