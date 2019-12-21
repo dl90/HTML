@@ -1,0 +1,159 @@
+.everything {
+    margin: 0;
+}
+
+.page-header {
+    background-color: thistle;
+    height: 150px;
+}.header-nav-bar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}.header-title {
+    color: black;
+    margin: 0;
+    font-size: 130px;
+    font-weight: 100;
+    padding-inline-start: 150px;
+    font-family: 'Libre Barcode 39 Extended Text';
+
+    display: flex;
+    align-self: flex-start;
+}.header-nav-links {
+    list-style: none;
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}.header-nav-link {
+    font-size: 20px;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}.header-nav-link:hover {
+    color: white;
+}
+
+
+.album-picture {
+    margin: 0;
+    height: auto;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+
+    display: flex;
+    align-content: flex-start;
+}.album-picture-link {
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    padding-inline-start: 150px;
+}.album-title {
+    display: flex;
+    align-content: center;
+}.album-title-header {
+    color: white;
+    font-size: 50px;
+    font-family: fantasy;
+    padding: 30px;
+    
+    display: flex;
+    align-self: center;
+}
+
+
+.all-tracks {
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 0;
+    padding-inline-start: 160px;
+    padding-inline-end: 100px;
+    display: flex;
+    flex-direction: column;
+}.track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px black solid;
+}.track:last-child {
+    border-bottom: none;
+}.track-main-info {
+    display:flex;
+    align-items: center;
+}.track-more-info {
+    display: flex;
+    align-items: center;
+}.track-name {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    font-weight: 700;
+}.track-name::after{
+    content: " --/-- ";
+}.artist-link, .track-play-button {
+    font-size: 20px;
+    font-weight: 550;
+    color: black;
+    text-decoration: none;
+}.artist-link:hover, .track-play-button:hover{
+    color: thistle;
+}.play-button {
+    background-color: white;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.access-time::before {
+    content: url(clock-icon.svg);
+    width: 100%;
+    height: 100%;
+}.access-time {
+    font-size: 0;
+    width: 24;
+    height: 24;
+}.track-play-button {
+    font-size: 0;
+    width: 24;
+    height: 24;
+}.track-play-button::after {
+    content: url(play-icon.svg);
+    width: 100%;
+    height: 100%;
+}.track-time {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}.track-time-info {
+    display: flex;
+    align-items: center;
+}
+
+
+.footer {
+    height: 50px;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.footer-copyright {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.iframe-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
