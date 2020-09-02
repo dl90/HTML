@@ -1,8 +1,4 @@
 /**
- * @author Don
- */
-
-/**
  * Function creates new post.
  */
 const newPostFunc = () => {
@@ -96,20 +92,20 @@ const newPostFunc = () => {
  * Function creates new comment.
  */
 const newComment = (comment) => {
-  
+
   const commentText = comment.parentElement.querySelector(".post-comment").value;
 
   const allCommentPosts = comment.parentElement.parentElement.querySelector('.all-comment-posts');
   const newComment = document.createElement('li');
   newComment.setAttribute('class', 'comment-post');
-  
+
   allCommentPosts.appendChild(newComment);
-  
+
   //user icon
   const userIcon = document.createElement('i');
   userIcon.setAttribute('class', "user-display-pic");
   newComment.appendChild(userIcon);
-  
+
   //comment section
   const newCommentText = document.createElement('p');
   newCommentText.setAttribute('class', 'post-text');

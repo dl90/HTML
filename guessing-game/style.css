@@ -1,11 +1,12 @@
-p, button, input {
-  font-family: 'Courier New', Courier, monospace;
+p,
+button,
+input {
+  font-family: "Courier New", Courier, monospace;
   font-size: 30px;
 }
 
 body {
   background-color: black;
- 
 }
 
 .somebody {

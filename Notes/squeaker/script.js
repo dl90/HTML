@@ -1,6 +1,6 @@
 const form = document.querySelector("#squeak-form");
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
   const name = document.querySelector("#name").value;
   const message = document.querySelector("#message").value;

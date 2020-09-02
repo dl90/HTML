@@ -12,17 +12,17 @@ const constructRepo = repo => {
 
 const constructRepos = repos => repos.map(constructRepo)
 
-const getRepos = () => 
-  fetch("https://api.github.com/users/meech-ward/repos")
-  .then(r => r.json())
-  // .then(item => console.log(item));
+const getRepos = async () =>
+  await fetch("https://api.github.com/users/meech-ward/repos")
+    .then(r => r.json())
+// .then(item => console.log(item));
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
   const reposContainer = document.querySelector("#repos-container")
 
   const appendRepo = repo => reposContainer.appendChild(repo)
-  
+
   getRepos()
     .then(constructRepos)
     .then(repos => repos.forEach(appendRepo))

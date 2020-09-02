@@ -1,6 +1,0 @@
-Week 7
-
-Semantic HTML
-CSS3 selectors
-Flexbox
-

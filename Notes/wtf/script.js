@@ -20,7 +20,7 @@ function createDivs(pokemons) {
 }
 
 // document.addEventListener('click', function(event) {
-//   fetch(url) 
+//   fetch(url)
 //   .then(data => data.json())
 //   .then(json => createDivs(json.results))
 //   .catch(error => {
@@ -28,12 +28,12 @@ function createDivs(pokemons) {
 //   });
 // })
 
-document.addEventListener('click', async function(event) {
+document.addEventListener('click', async function (event) {
   try {
-    const data = await fetch(url) 
+    const data = await fetch(url)
     const json = await data.json()
     createDivs(json.results)
-  } catch(error) {
+  } catch (error) {
     console.log("AHHHHH ERRORR!!!!!!!!", error.message)
   }
 })

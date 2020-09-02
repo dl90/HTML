@@ -1,6 +1,4 @@
 console.log("testy test");
-//var question = 
-
 
 var titleClicked = document.querySelector("#question-text");
 titleClicked.addEventListener("click", test);
@@ -22,8 +20,8 @@ function generateNewGame() {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    let number2 = getRandomIntInclusive(0,10);
-    let number1 = getRandomIntInclusive(0,10);
+    let number2 = getRandomIntInclusive(0, 10);
+    let number1 = getRandomIntInclusive(0, 10);
 
     var questionNew = `What is ${number1} + ${number2}?`;
     const newGameEqu = document.querySelector("#question-text");
@@ -48,17 +46,17 @@ function checkInput(event) {
     const result = document.querySelector("#result")
     const myElement = document.querySelector("#result");
 
-   if(answer1 == rightAnswer) {
+    if (answer1 == rightAnswer) {
         result.innerText = "Correct 🤗";
         //myElement.classList.remove("result");
         myElement.classList.remove("bad");
         myElement.classList.add("good");
-   } else {
-       result.innerText = "Incorrect 💩";
-       //myElement.classList.remove("result");
-       myElement.classList.remove("good");
-       myElement.classList.add("bad"); //class name doesnt need #
-   }
+    } else {
+        result.innerText = "Incorrect 💩";
+        //myElement.classList.remove("result");
+        myElement.classList.remove("good");
+        myElement.classList.add("bad"); //class name doesnt need #
+    }
 
 }
 

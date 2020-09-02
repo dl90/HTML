@@ -26,7 +26,8 @@ body {
   margin: 20px 0;
 }
 
-.main-content, .squeak-form {
+.main-content,
+.squeak-form {
   width: 600px;
   margin: auto;
 }
@@ -44,7 +45,8 @@ body {
   padding: 20px 0;
 }
 
-.squeak-form input, .squeak-form button {
+.squeak-form input,
+.squeak-form button {
   font-size: 20px;
   display: block;
   width: 100%;

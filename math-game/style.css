@@ -1,18 +1,17 @@
 p, button, input {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 30px;
 }
 
 body {
   background-color: rgb(189, 209, 133);
-  
   margin-left: 300px;
   margin-top: 100px;
   margin-right: auto;
 }
 
 .abc {
- background-color: azure;
+  background-color: azure;
 }
 
 .good {
@@ -21,4 +20,3 @@ body {
 .bad {
   color: red;
 }
-

@@ -1,9 +1,8 @@
-/*
-Don Li
-*/
-
-p, button, input, li {
-  font-family: 'Courier New', Courier, monospace;
+p,
+button,
+input,
+li {
+  font-family: "Courier New", Courier, monospace;
   font-size: 30px;
 }
 
@@ -18,7 +17,6 @@ body {
 
 #word-form {
   padding-top: 100px;
-
 }
 
 #letter-list {
@@ -29,6 +27,6 @@ body {
   background-image: url("img.jpeg");
   background-repeat: no-repeat;
   background-size: 500px;
-  
+
   background-position: 0px 200px;
 }

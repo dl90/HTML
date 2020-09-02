@@ -1,7 +1,3 @@
-/**
- * @author Don (dl90)
- */
-
 //*** uncomment to run ***
 main(posts);
 
@@ -9,7 +5,7 @@ main(posts);
  * Main function for calling createPost/Comment.
  * @param {Array} post An array of objects containg info for creating posts.
  */
-function main (post) {
+function main(post) {
   const postContainer = document.querySelector('.post-container');
   postContainer.innerHTML = "";
   let id = [];
@@ -127,20 +123,20 @@ function createPostElement(post) {
     const newCommentText = commentFormSelector.querySelector('.post-comment').value;
     const verify = (newCommentText.length);
 
-    if(verify >= 5) {
+    if (verify >= 5) {
       newObj.message = newCommentText;
 
       //push the comment object into the post object.comments array
       post.comments.push(newObj);
       // console.log(post.comments);
-  
+
       const postPoster = commentFormSelector.parentElement.parentElement.querySelector('.all-comment-posts');
       postPoster.innerHTML = "";
       renderComments(post);
     } else {
       alert('\nPlease enter the correct information for a new comment!')
     }
-    
+
   });
 
   const likeEvent = document.getElementById(`${postId}`).querySelector('.like-icon');
@@ -231,12 +227,12 @@ function postFunctionality(idArr) {
       obj.image_url = postImageUrl;
       obj.message = postImageComment;
       obj.comments = [];
-  
+
       createPostElement(obj);
       idArr.push(newId);
-  
+
       const footer = document.querySelector('.gap-spacing');
-      footer.scrollIntoView({ behavior: "smooth"});
+      footer.scrollIntoView({ behavior: "smooth" });
       document.querySelector('#post-form').reset();
     }
   });

@@ -1,21 +1,17 @@
-/**
- * @author Don (dl90)
- */
-
 const url = 'https://instasam-one.herokuapp.com/api/insta_posts';
 
 main();
 
-function main () {
+function main() {
   document.addEventListener('DOMContentLoaded', fetchFromDb());
 }
 
 function fetchFromDb() {
   try {
-    fetch(url , { method: 'GET' })
+    fetch(url, { method: 'GET' })
       .then(data => data.json()
         .then(arr => call(arr)))
-  } catch(error) {
+  } catch (error) {
     console.log("Loading Error!!!", error.message)
   }
 }
@@ -25,7 +21,7 @@ function fetchFromDb() {
  * Call function for calling createPost/Comment.
  * @param {Array} post An array of objects containg info for creating posts.
  */
-function call (post) {
+function call(post) {
   const postContainer = document.querySelector('.post-container');
   postContainer.innerHTML = "";
   let id = [];
@@ -147,7 +143,7 @@ function createPostElement(post) {
     const newCommentText = commentFormSelector.querySelector('.post-comment').value;
     const verify = (newCommentText.length);
 
-    if(verify >= 5) {
+    if (verify >= 5) {
       commentObj.message = newCommentText;
 
       //push the comment object into the post object.comments array
@@ -159,18 +155,19 @@ function createPostElement(post) {
           method: 'POST',
           headers: {
             "accept": "application/json",
-            "Content-Type": "application/json" },
+            "Content-Type": "application/json"
+          },
           body: JSON.stringify(commentObj)
         })
-        .then(res => {
-          if(res.ok) {
-            fetchFromDb();
-          } else {
-            throw new Error("Request Failed")
-          }
-        })
-        .catch(err => console.log(`Failed to post comment: ${err}`))
-      } catch(error) {
+          .then(res => {
+            if (res.ok) {
+              fetchFromDb();
+            } else {
+              throw new Error("Request Failed")
+            }
+          })
+          .catch(err => console.log(`Failed to post comment: ${err}`))
+      } catch (error) {
         console.log("Comment Error!!!", error.message);
       }
 
@@ -182,7 +179,7 @@ function createPostElement(post) {
     } else {
       alert('\nPlease enter the correct information for a new comment!')
     }
-    
+
   });
 
   let counter = 0;
@@ -193,7 +190,7 @@ function createPostElement(post) {
       const likeObj = {};
       const likePostURL = `https://instasam-one.herokuapp.com/api/insta_posts/${postId}/likes`
 
-      likeObj.like_count = parseInt( post.like_count )+ 1
+      likeObj.like_count = parseInt(post.like_count) + 1
       counter = counter + 1;
 
       console.log('Like post: ' + `${postId}` + `  [ server side: ${post.like_count} / DOM side: ${counter} ]`);
@@ -202,17 +199,18 @@ function createPostElement(post) {
         method: `POST`,
         headers: {
           "accept": "application/json",
-          "Content-Type": "application/json"},
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify(likeObj)
       })
-      .then(res => {
-        if(res.ok) {
-          // fetchFromDb();
-        } else {
-          throw new Error("Fetch Failed")
-        }
-      })
-    } catch(error) {
+        .then(res => {
+          if (res.ok) {
+            // fetchFromDb();
+          } else {
+            throw new Error("Fetch Failed")
+          }
+        })
+    } catch (error) {
       console.log("Like click event POST error " + error.message)
     }
   })
@@ -303,7 +301,7 @@ function postFunctionality(idArr) {
       obj.image_url = postImageUrl;
       obj.message = postImageComment;
       obj.comments = [];
-  
+
 
       //sends post to Database.
       try {
@@ -312,22 +310,22 @@ function postFunctionality(idArr) {
           body: JSON.stringify({ post: obj }),
           headers: { "Content-Type": "application/json" }
         })
-        .then(res => {
-          if (res.ok) {
-            const postContainer = document.querySelector('.post-container');
-            postContainer.innerHTML = "";
-            fetchFromDb();
-          } else {
-            throw new Error("Post Request Failed!")
-          }
-        })
-        .catch(err => console.log(`Failed to post: ${err}`))
-      } catch(error) {
+          .then(res => {
+            if (res.ok) {
+              const postContainer = document.querySelector('.post-container');
+              postContainer.innerHTML = "";
+              fetchFromDb();
+            } else {
+              throw new Error("Post Request Failed!")
+            }
+          })
+          .catch(err => console.log(`Failed to post: ${err}`))
+      } catch (error) {
         console.log("Posting Error!!!", error.message)
       }
-  
+
       const scroll = document.querySelector(".page-header");
-      scroll.scrollIntoView({ behavior: "smooth"});
+      scroll.scrollIntoView({ behavior: "smooth" });
       document.querySelector('#post-form').reset();
 
       alert("New post added");

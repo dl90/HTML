@@ -3,11 +3,11 @@
 
   let context = candyCanvas.getContext('2d')
   context.strokeStyle = "rebeccapurple"
-  context.lineWidth = 10 
+  context.lineWidth = 10
 
   let x = 10
 
-  document.addEventListener('click', function() {
+  document.addEventListener('click', function () {
     context.beginPath()
     context.moveTo(x, 10)
     context.lineTo(x, 200)
